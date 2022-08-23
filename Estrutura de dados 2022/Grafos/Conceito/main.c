@@ -11,6 +11,9 @@ int op=1;
 int grafo_tam();
 void grafo_insert();
 void grafo_remove();
+void grafo_desenhar();
+void grafo_desenhar_ma();
+void menu_mostrar();
 
  
 
@@ -25,10 +28,31 @@ int main(int argc, char *argv[]) {
 			printf("Escolha um valor entre 1 e %d\n\n", max);
 		}
 		else{
+			int i;
+			for(i=0;i<tam;i++){
+				grafo[i]=1;
+			}
 			
 		}
 	}
 	
+	while(op!=0){
+		system("cls");
+		grafo_desenhar();
+		grafo_desenhar_ma();
+		menu_mostrar();
+		scanf("%d", &op);
+		
+		switch (op) {
+			case 1:
+				grafo_insert();		
+			break;
+			case 2:
+				grafo_remove;
+			break;
+			}
+			}
+			
 	return 0;
 }
 
@@ -74,4 +98,36 @@ void grafo_remover(){
 		mat[num1][num2]=0;
 		mat[num2][num1]=0;
 	}
+}
+
+void grafo_desenhar(){
+	int i;
+	printf("Listas de vertices\n[  ");
+	for (i = 0; i < tam; i++){
+		
+		printf("%d ", grafo[i] );
+	}
+	printf("  ]\n\n");
+}
+
+void grafo_desenhar_ma(){
+	int i;
+	int j;
+	printf("Matriz de adjacencias\n[\n");
+	for(i=0;i<tam;i++){
+		for(j=0;j<tam;j++){
+			printf(" %d", mat[i][j]);
+		}
+		printf("\n");
+		
+	}
+	printf("]\n\n");
+}
+
+//Mostrar o menu de opçõeses
+void menu_mostrar() {
+printf("\nEscolha uma opção:\n");
+printf("1 - Inserir aresta\n");
+printf("2 - Remover aresta\n");
+printf("0 - Sair\n\n");
 }
