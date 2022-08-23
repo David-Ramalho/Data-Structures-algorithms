@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
 				grafo_insert();		
 			break;
 			case 2:
-				grafo_remove;
+				grafo_remove();
 			break;
 			}
 			}
@@ -82,7 +82,7 @@ void grafo_insert(){
 	}
 }
 
-void grafo_remover(){
+void grafo_remove(){
 		int num1, num2;
 	system("cls");
 	printf("Escolha o vertice de origem entre 0 a %d:", tam-1);
