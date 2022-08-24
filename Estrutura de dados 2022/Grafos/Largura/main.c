@@ -18,6 +18,7 @@ void buscaEmLargura(struct str_no g[], int inicio, int alvo);
 
 
 int main(int argc, char *argv[]) {
+	
 	return 0;
 }
 
