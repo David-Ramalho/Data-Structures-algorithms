@@ -48,7 +48,7 @@ printf("Opcoes:\n");
 printf("\t 1 - Adicionar um Grafo\n");
 printf("\t 2 - Procura Os Menores Caminhos no Grafo\n");
 printf("\t 0 - Sair do programa\n");
-printf("? ");
+//printf("? ");
 }
 
 void grafo_criar(void){
